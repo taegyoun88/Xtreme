@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="robots" content="noindex, nofollow">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Xtreme Project Page</title>
+    <title>EgoXtreme Project Page</title>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     
@@ -17,7 +17,7 @@
             line-height: 1.6;
         }
 
-        /* 상단 네비게이션 바 */
+        /* 네비게이션 */
         nav {
             background-color: #333;
             color: white;
@@ -35,7 +35,7 @@
         }
         nav .menu a:hover { color: white; }
 
-        /* 메인 컨텐츠 컨테이너 */
+        /* 컨테이너 */
         .container {
             max-width: 900px;
             margin: 60px auto;
@@ -43,198 +43,165 @@
             padding: 0 20px;
         }
 
-        /* 제목 스타일 */
-        h1 {
-            color: #b30000;
-            font-size: 3rem;
-            margin-bottom: 10px;
-        }
-        .subtitle {
-            font-size: 1.5rem;
-            font-weight: normal;
-            margin-bottom: 30px;
-            color: #444;
-        }
+        h1 { color: #b30000; font-size: 3rem; margin-bottom: 10px; }
+        .subtitle { font-size: 1.5rem; margin-bottom: 30px; color: #444; }
+        .authors { font-size: 1.1rem; color: #007bff; margin-bottom: 10px; }
+        .affiliations { font-size: 0.95rem; color: #666; margin-bottom: 20px; }
+        .conference { font-weight: bold; font-size: 1.1rem; margin-bottom: 40px; }
 
-        /* 저자 목록 */
-        .authors {
-            font-size: 1.1rem;
-            color: #007bff;
-            margin-bottom: 10px;
-        }
-        .authors span { margin: 0 10px; cursor: pointer; }
-        .authors sup { color: #666; }
-
-        /* 소속 */
-        .affiliations {
-            font-size: 0.95rem;
-            color: #666;
-            margin-bottom: 20px;
-        }
-
-        /* 학회명 */
-        .conference {
-            font-weight: bold;
-            font-size: 1.1rem;
-            margin-bottom: 40px;
-        }
-
-        /* 버튼들 */
-        .buttons {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            margin-bottom: 50px;
-        }
+        /* 버튼 */
+        .buttons { display: flex; justify-content: center; gap: 20px; margin-bottom: 50px; }
         .btn {
-            background-color: #333;
-            color: white;
-            padding: 10px 20px;
-            border-radius: 30px;
-            text-decoration: none;
-            font-size: 1.1rem;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            transition: background 0.3s;
+            background-color: #333; color: white; padding: 10px 20px;
+            border-radius: 30px; text-decoration: none; font-size: 1.1rem;
+            display: flex; align-items: center; gap: 8px; transition: background 0.3s;
         }
         .btn:hover { background-color: #555; }
-        .btn i { font-size: 1rem; }
 
-        /* Overview 섹션 스타일 */
-        .overview-section {
-            text-align: left; /* 제목 왼쪽 정렬 */
+        /* 유튜브 반응형 컨테이너 */
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 비율 */
+            height: 0;
+            overflow: hidden;
+            max-width: 100%;
+            background: #000;
             margin-bottom: 50px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
         }
-        
-        .section-title {
-            font-size: 2rem;
-            color: #333;
-            border-bottom: 2px solid #eee;
-            padding-bottom: 10px;
-            margin-bottom: 20px;
-        }
-        
-        /* 갤러리 레이아웃 */
-        .gallery-container {
-            display: flex;
-            flex-direction: column;
-            gap: 10px; /* 줄 간격 */
-            margin-bottom: 20px;
-        }
-        
-        /* 윗줄: 큰 이미지 2개 배치 (50:50) */
-        .grid-large {
-            display: grid;
-            grid-template-columns: 1fr 1fr; /* 1:1 비율 */
-            gap: 10px; /* 이미지 사이 간격 */
-        }
-        
-        /* 아랫줄: 작은 이미지 6개 배치 */
-        .grid-small {
-            display: grid;
-            grid-template-columns: repeat(6, 1fr); /* 6개를 균등 분할 */
-            gap: 5px; /* 작은 이미지 사이 간격은 좀 더 좁게 */
-        }
-        
-        /* 모바일 대응 (화면이 작아지면) */
-        @media (max-width: 768px) {
-            .grid-large { grid-template-columns: 1fr; } /* 큰 거 1줄로 */
-            .grid-small { grid-template-columns: repeat(3, 1fr); } /* 작은 거 3개씩 2줄로 */
-        }
-        
-        /* 이미지 공통 스타일 */
-        .gallery-container img {
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
             width: 100%;
-            height: auto;
-            display: block;
-            border-radius: 4px; /* 모서리 살짝 둥글게 */
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* 살짝 그림자 */
-        }
-        
-        /* 설명 텍스트 스타일 */
-        .overview-text {
-            font-size: 1.05rem;
-            color: #444;
-            line-height: 1.6;
-            text-align: justify; /* 양쪽 정렬 */
+            height: 100%;
+            border: 0;
         }
 
+        /* Overview 섹션 */
+        .overview-section { text-align: left; margin-bottom: 50px; }
+        .section-title {
+            font-size: 2rem; color: #333; border-bottom: 2px solid #eee;
+            padding-bottom: 10px; margin-bottom: 20px;
+        }
+        
+        .gallery-container { display: flex; flex-direction: column; gap: 10px; margin-bottom: 20px; }
+        
+        /* 이미지 그리드 */
+        .grid-large { display: grid; grid-template-columns: 1fr; gap: 10px; } /* 티저 이미지는 보통 1개로 꽉 채웁니다 */
+        .grid-small { display: grid; grid-template-columns: repeat(6, 1fr); gap: 5px; }
+
+        @media (max-width: 768px) {
+            .grid-small { grid-template-columns: repeat(3, 1fr); }
+            h1 { font-size: 2rem; }
+        }
+
+        .gallery-container img {
+            width: 100%; height: auto; display: block;
+            border-radius: 4px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .overview-text { font-size: 1.05rem; color: #444; line-height: 1.6; text-align: justify; }
+
+        /* 앵커 위치 보정 (네비게이션 바에 가리지 않게) */
+        section { scroll-margin-top: 80px; }
     </style>
 </head>
 <body>
 
     <nav>
-        <div class="logo">EgoXtreme 🚀</div> <div class="menu">
-            <a href="#">About</a>
-            <a href="#">Dataset</a>
-            <a href="#">Video</a>
-            <a href="#">Citation</a>
-            <a href="#">Team</a>
+        <div class="logo">EgoXtreme 🚀</div>
+        <div class="menu">
+            <a href="#about">About</a>
+            <a href="#dataset">Dataset</a>
+            <a href="#video">Video</a>
+            <a href="#citation">Citation</a>
+            <a href="#team">Team</a>
         </div>
     </nav>
 
     <div class="container">
-        <h1>EgoXtreme Dataset</h1>
-        <div class="subtitle">
-            A Dataset for Robust Object Pose Estimation in Egocentric Views<br>under Extreme Conditions
-        </div>
-
-        <div class="authors">
-            <span>AAAA<sup>1</sup></span>
-        </div>
-
-        <div class="affiliations">
-            <sup>1</sup>AAAA University
-        </div>
-
-        <div class="conference">
-            AAAA (2026)
-        </div>
-
-        <div class="buttons">
-            <a href="#" class="btn"><i class="fas fa-file-pdf"></i> Paper</a>
-            <a href="#" class="btn"><i class="fas fa-database"></i> Dataset</a>
-            <a href="#" class="btn"><i class="fab fa-github"></i> Code</a>
-        </div>
         
+        <section id="about">
+            <h1>EgoXtreme Dataset</h1>
+            <div class="subtitle">
+                A Dataset for Robust Object Pose Estimation in Egocentric Views<br>under Extreme Conditions
+            </div>
+
+            <div class="authors">
+                <span>Hong Gil Dong<sup>1</sup></span>
+                <span>Kim Chul Soo<sup>2</sup></span>
+            </div>
+
+            <div class="affiliations">
+                <sup>1</sup>Seoul National University &nbsp;&nbsp; <sup>2</sup>Meta Reality Labs Research
+            </div>
+
+            <div class="conference">
+                AAAA (2026)
+            </div>
+
+            <div class="buttons">
+                <a href="#" class="btn"><i class="fas fa-file-pdf"></i> Paper</a>
+                <a href="#" class="btn"><i class="fas fa-database"></i> Dataset</a>
+                <a href="#" class="btn"><i class="fab fa-github"></i> Code</a>
+            </div>
+        </section>
+
         <hr style="border: 0; border-top: 1px solid #eee; margin: 40px 0;">
 
-        <p style="color: #666;">
-            https://youtu.be/kUFocvaZ91A
-        </p>
+        <section id="video">
+            <h2 class="section-title">Video</h2>
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/kUFocvaZ91A" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </section>
+
+        <section id="dataset" class="overview-section">
+            <h2 class="section-title">Dataset Overview</h2>
+            
+            <div class="gallery-container">
+                <div class="grid-large">
+                    <img src="https://via.placeholder.com/800x400?text=Teaser+Image+(Please+Convert+PDF+to+JPG)" alt="Teaser Scene">
+                </div>
+
+                <div class="grid-small">
+                    <img src="https://via.placeholder.com/300x200" alt="Ex 1">
+                    <img src="https://via.placeholder.com/300x200" alt="Ex 2">
+                    <img src="https://via.placeholder.com/300x200" alt="Ex 3">
+                    <img src="https://via.placeholder.com/300x200" alt="Ex 4">
+                    <img src="https://via.placeholder.com/300x200" alt="Ex 5">
+                    <img src="https://via.placeholder.com/300x200" alt="Ex 6">
+                </div>
+            </div>
+
+            <p class="overview-text">
+                <strong>EgoXtreme</strong> is a novel, large-scale dataset designed for robust egocentric 6D object pose estimation under extreme conditions.
+                Specifically, 8 illumination conditions are used across three scenarios, and smoke is included in specific scenes.
+                These conditions, combined with severe motion blur, make accurate 6D object pose estimation extremely challenging. 
+                (<span style="color: blue;">blue</span> for camera wearers and <span style="color: red;">red</span> for interactors).
+            </p>
+        </section>
+
+        <section id="citation" style="text-align: left; margin-bottom: 50px;">
+            <h2 class="section-title">Citation</h2>
+            <pre style="background: #f4f4f4; padding: 15px; border-radius: 5px; overflow-x: auto;">
+@inproceedings{egoxtreme2026,
+  title={EgoXtreme: Robust Object Pose Estimation...},
+  author={Hong, Gil Dong and Kim, Chul Soo},
+  booktitle={AAAA},
+  year={2026}
+}</pre>
+        </section>
+
+        <section id="team" style="text-align: left;">
+            <h2 class="section-title">Team</h2>
+            <p>
+                Our team consists of researchers from... (팀원 소개 내용을 적어주세요)
+            </p>
+        </section>
+
     </div>
-
-    <div class="overview-section">
-    <h2 class="section-title">Dataset Overview</h2>
-    
-    <div class="gallery-container">
-        
-        <div class="grid-large">
-            <img src="https://github.com/taegyoun88/Xtreme/blob/main/Teaser_2.pdf" alt="Scene 1">
-        </div>
-
-        <div class="grid-small">
-            <img src="https://via.placeholder.com/300x200" alt="Ex 1">
-            <img src="https://via.placeholder.com/300x200" alt="Ex 2">
-            <img src="https://via.placeholder.com/300x200" alt="Ex 3">
-            <img src="https://via.placeholder.com/300x200" alt="Ex 4">
-            <img src="https://via.placeholder.com/300x200" alt="Ex 5">
-            <img src="https://via.placeholder.com/300x200" alt="Ex 6">
-            <img src="https://via.placeholder.com/300x200" alt="Ex 7">
-            <img src="https://via.placeholder.com/300x200" alt="Ex 8">
-            <img src="https://via.placeholder.com/300x200" alt="Ex 9">
-            <img src="https://via.placeholder.com/300x200" alt="Ex 10">
-            <img src="https://via.placeholder.com/300x200" alt="Ex 11">
-            <img src="https://via.placeholder.com/300x200" alt="Ex 12">
-        </div>
-    </div>
-
-    <p class="overview-text">
-        <strong>EgoXtreme</strong> is a large-scale dataset capturing ground-truth 3D object poses...
-        (여기에 논문의 Abstract나 데이터셋 설명을 적으시면 됩니다. 보여주신 예시처럼 
-        <span style="color: blue;">blue</span> 나 <span style="color: red;">red</span> 색상도 넣을 수 있습니다.)
-    </p>
 
 </body>
 </html>
