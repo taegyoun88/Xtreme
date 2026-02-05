@@ -1,12 +1,150 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Xtreme</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xtreme Project Page</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <style>
+        body {
+            font-family: 'Noto Sans', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* 상단 네비게이션 바 */
+        nav {
+            background-color: #333;
+            color: white;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        nav .logo { font-weight: bold; font-size: 1.1rem; }
+        nav .menu a {
+            color: #ccc;
+            text-decoration: none;
+            margin-left: 20px;
+            font-size: 0.9rem;
+        }
+        nav .menu a:hover { color: white; }
+
+        /* 메인 컨텐츠 컨테이너 */
+        .container {
+            max-width: 900px;
+            margin: 60px auto;
+            text-align: center;
+            padding: 0 20px;
+        }
+
+        /* 제목 스타일 */
+        h1 {
+            color: #b30000;
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+        .subtitle {
+            font-size: 1.5rem;
+            font-weight: normal;
+            margin-bottom: 30px;
+            color: #444;
+        }
+
+        /* 저자 목록 */
+        .authors {
+            font-size: 1.1rem;
+            color: #007bff;
+            margin-bottom: 10px;
+        }
+        .authors span { margin: 0 10px; cursor: pointer; }
+        .authors sup { color: #666; }
+
+        /* 소속 */
+        .affiliations {
+            font-size: 0.95rem;
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        /* 학회명 */
+        .conference {
+            font-weight: bold;
+            font-size: 1.1rem;
+            margin-bottom: 40px;
+        }
+
+        /* 버튼들 */
+        .buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 50px;
+        }
+        .btn {
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-size: 1.1rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: background 0.3s;
+        }
+        .btn:hover { background-color: #555; }
+        .btn i { font-size: 1rem; }
+
+    </style>
 </head>
 <body>
-  <h1>Xtreme Dataset</h1>
-  <p>A Dataset for Robust Object Pose Estimation in centric Views under Extreme Conditions</p>
+
+    <nav>
+        <div class="logo">EgoXtreme 🚀</div> <div class="menu">
+            <a href="#">About</a>
+            <a href="#">Dataset</a>
+            <a href="#">Challenge</a>
+            <a href="#">Citation</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1>EgoXtreme Dataset</h1>
+        <div class="subtitle">
+            Robust Object Pose Estimation in Egocentric Views<br>under Extreme Conditions
+        </div>
+
+        <div class="authors">
+            <span>Gil-Dong Hong<sup>1</sup></span>
+            <span>Chul-Soo Kim<sup>2</sup></span>
+            <span>Young-Hee Lee<sup>1</sup></span>
+        </div>
+
+        <div class="affiliations">
+            <sup>1</sup>Hankook University &nbsp;&nbsp; <sup>2</sup>Samsung Electronics
+        </div>
+
+        <div class="conference">
+            Computer Vision and Pattern Recognition (CVPR) 2026
+        </div>
+
+        <div class="buttons">
+            <a href="#" class="btn"><i class="fas fa-file-pdf"></i> Paper</a>
+            <a href="#" class="btn"><i class="fas fa-database"></i> Dataset</a>
+            <a href="#" class="btn"><i class="fab fa-github"></i> Code</a>
+        </div>
+        
+        <hr style="border: 0; border-top: 1px solid #eee; margin: 40px 0;">
+
+        <p style="color: #666;">
+            (여기에 Teaser Video나 Abstract를 넣으시면 됩니다.)
+        </p>
+    </div>
+
 </body>
 </html>
