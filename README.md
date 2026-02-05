@@ -2,6 +2,7 @@
 **EgoXtreme** is a novel, large-scale dataset designed for robust egocentric 6D object pose estimation under extreme conditions.
 
 [Project page](https://taegyoun88.github.io/Xtreme/) [Paper] [Dataset]
+![EgoXtreme Sample](egoxtreme_sample.jpg)
 
 ## News
 
