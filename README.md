@@ -75,18 +75,19 @@ Due to the large file size, rgb_undist and mask_undist folders are not included 
 Run the following command:
 
 ```
-# Example: Process specific scene
+# Process a specific scene
 python tools/undistortion.py --data_dir ./data/train --scene_id 000000
 
-# Example: Process all scenes in train/test set
+# Process all scenes in train/test set
 python tools/undistortion.py --data_dir ./data/train --all
 ```
 
 ## Visualization
-To visualize the Ground Truth pose on the images
+To visualize the Ground Truth pose on the images.
 
 ```
-python tools/visualize_pose.py --data_dir ./data/test --scene_id 11
+# Visualize specific scene (Add --undist for undistorted images, --im_id for single frame)
+python tools/visualize_pose.py --data_dir ./data/test --scene_id 000000 --models_dir ./models [--undist] [--im_id 0]
 ```
 
 ## Baseline Results
