@@ -113,7 +113,7 @@ The results are evaluated using the **ADD(-S) recall** metric at **0.1d** thresh
 @inproceedings{egoxtreme2026,
   title={EgoXtreme: A Dataset for Robust Object Pose Estimation in Egocentric Views under Extreme Conditions},
   author={Yoon, Taegyoon and Han, Yegyu and Ji, Seojin and Park, Jaewoo and Kim, Sojeong and Kwon, Taein and Kim, Hyung-Sin},
-  booktitle={AAAA},
+  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
   year={2026}
 }
 ```
